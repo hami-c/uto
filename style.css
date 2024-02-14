@@ -1,0 +1,1119 @@
+@charset "UTF-8";
+
+/* 使用するフォントの「フォントファイル」と「ファイルパス」を指定 */
+@font-face {
+  font-family:'Mamelon';
+  src: url('../webfont/Mamelon-3-Hi-Regular.otf');
+}
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.top-link {
+  position: fixed; /* 画面から見た位置で要素を固定 */
+  right: 30px;
+  bottom: 30px;
+  width: 80px;
+  z-index: 999;
+}
+
+#fullOverlay{
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 999;
+  display: none;
+}
+
+.whitebanner {
+  display: block;
+  margin: auto; /* 中央揃え */
+  width: 100%; /* 幅を100%に設定 */
+  height: auto; /* 高さは自動調整 */
+  position: relative; /* 子要素の絶対位置の基準点になる */
+}
+
+.top-banner{
+  background-image: url(./img/whitebanner.png);
+  position: absolute;
+  width: 100%;
+  height: 11.5%;
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: lighten;
+  z-index: 1000;
+  box-shadow: 0px 5px 10px 0px rgb(198 198 198 / 50%);
+}
+
+.banner-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.9%;
+}
+
+.spaceBox {
+  width: 17%;
+  margin-right: 1%;
+}
+
+.lismi-logo { width: 15%; }
+
+.job-btn {
+  width: 17%;
+  margin-right: 1%;
+  position: relative;
+  z-index: 1;
+}
+
+.job-img { width: 100%; }
+
+.lismi_logo_top {
+  position: absolute; /* 絶対位置で配置 */
+  top: 50%; /* 親要素の中央 */
+  left: 50%; /* 親要素の中央 */
+  transform: translate(-50%, -50%); /* 中央揃えの調整 */
+  width: 7%; /* ロゴの幅 */
+  height: auto; /* 高さは自動調整 */
+}
+
+/* ビデオのスタイル */
+#bg-video {
+  width: 100%;
+  z-index: -1;
+  background-size: cover; /* 画面いっぱいに表示 */
+}
+.video-background { position: relative; }
+
+.gradationBottom {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0),rgb(255 255 255));
+}
+
+.gradationBottom2 {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0),rgb(255 255 255));
+}
+
+.gradationTop {
+  width: 100%;
+  height: 145px;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(rgb(255,255,255),rgba(0,0,0,0));
+}
+
+.catch{
+  position: absolute;
+  top: 36%;
+  right: 3%;
+  transform: translateY(-50%);
+  height: 12%;
+  width: auto;
+  font-family: Mamelon;
+  color: #656565;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  font-size: 2.3vw;
+  text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF,
+  -4px 4px 4px #FFFFFF,  4px -4px 4px #FFFFFF,
+  4px 0 4px #FFFFFF, -4px  0 4px #FFFFFF,
+  0 4px 4px #FFFFFF,  0 -4px 4px #FFFFFF;
+  z-index: 1;
+}
+
+.pink-txt {
+  color: #FF98BD;
+}
+
+#biglogo {
+  position: absolute;
+  top: 37%;
+  right: 6%;
+  height: 15%;
+  width: auto;
+  z-index: 1;
+}
+
+.storebtn {
+  position: absolute;
+  top: 59%;
+  right: 8%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.ios-image {
+  width: 11vw;
+  margin-right: 1.5vw;
+}
+
+.android-image {
+  width: 13vw;
+}
+
+.backimg1 {
+  width: 100%;
+  height: auto;
+  background-image: url('../img/back1.png');
+  background-size: cover;
+  position: relative;
+}
+
+.appDetails {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph1, .paragraph2, .paragraph3 {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  font-family: Mamelon;
+  color: #656565;
+  font-weight: 400;
+  line-height: 3vw;
+  text-align: center;
+  font-size: 1.5vw;
+  text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF,
+  -4px 4px 4px #FFFFFF,  4px -4px 4px #FFFFFF,
+  4px 0 4px #FFFFFF, -4px  0 4px #FFFFFF,
+  0 4px 4px #FFFFFF,  0 -4px 4px #FFFFFF;
+}
+
+.paragraph3 { padding-bottom: 10%; }
+
+.titleDetails {
+  padding-top: 7%;
+  padding-bottom: 5%;
+  font-family: Mamelon;
+  color: #5DC1D7;
+  font-size: 3.4vw;
+  text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF,
+  -4px 4px 4px #FFFFFF,  4px -4px 4px #FFFFFF,
+  4px 0 4px #FFFFFF, -4px  0 4px #FFFFFF,
+  0 4px 4px #FFFFFF,  0 -4px 4px #FFFFFF;
+}
+
+.backimg2 {
+  width: 100%;
+  height: auto;
+  background-image: url('../img/back2.png');
+  background-position: center;
+  position: relative;
+}
+
+.vertical-line {
+  display: flex;
+  flex-flow: column;
+}
+
+.speech-bubble-box {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.speech-bubble { width: 43vw; }
+
+.girl-img { width: 40vw; }
+
+.fuwafuwa-box {
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+}
+
+.fuwafuwa {
+  z-index: 1;
+}
+
+.problemTitle {
+  padding-top: 9%;
+  font-family: Mamelon;
+  color: #656565;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  font-size: 2.5vw;
+  text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF,
+  -4px 4px 4px #FFFFFF,  4px -4px 4px #FFFFFF,
+  4px 0 4px #FFFFFF, -4px  0 4px #FFFFFF,
+  0 4px 4px #FFFFFF,  0 -4px 4px #FFFFFF;
+  z-index: 1;
+}
+
+.pink-banner {
+  width: 100%;
+  height: 9vw;
+  background-image: url(../img/pinkbanner.png);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pinkbanner-txt {
+  width: 27vw;
+  height: 100%;
+  margin-top: 0.7vw;
+}
+
+.polygon { width: 15%; }
+
+.centering {
+  display: flex;
+  justify-content: center;
+}
+
+.sankaku{ width: 60px; }
+
+.feature{
+  padding-top: 8%;
+  padding-bottom: 2%;
+  font-family: Mamelon;
+  color: #656565;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.pinkline {
+  display: block;
+  margin: auto;
+  padding-bottom: 3%;
+  width: 5%;
+  height: auto;
+}
+
+.picset {
+  display: flex;
+  justify-content: center; /* 子要素を中央揃えに */
+  margin: 0 auto; /* 左右のマージンを自動に設定して中央揃えに */
+}
+
+.pic-item {
+  flex: 0 1 calc(30% - 20px); /* flex-grow, flex-shrink, flex-basis */
+  margin: 2%; /* 画像間と上下のスペース */
+  text-align: left; /* テキストを左揃えに */
+  font-family: Mamelon;
+  color: #656565;
+}
+
+.pic {
+  width: 100%;
+  height: auto;
+}
+
+.pic-description{
+  margin-top: 2%;
+  font-size: 1.6vw;
+}
+
+.pic-detail {
+  margin-top: 7%;
+  margin-bottom: 25%;
+  font-size: 1.4vw;
+}
+
+.backimg3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url(../img/back3.png);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 10%;
+}
+
+.img-block {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.ribbon {
+  display: flex;
+  justify-content: center;
+}
+
+.ribbon-img {
+  margin-top: 9%;
+  margin-bottom: 4%;
+  width: 38vw;
+}
+
+.counselor-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.counselor-img {
+  width: 80%;
+  margin: 0
+}
+
+.slider { margin: 0 auto; }
+
+.backimg4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url('../img/back4.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.diagnosisBackImg {
+  position: relative;
+  width: 100%;
+  background-image: url(../img/diagnosisBack.png);
+  background-size: cover;
+}
+
+.bestteacher-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 14%;
+  padding-bottom: 13%;
+}
+
+.bestteacher-img { width: 50vw; }
+
+.bestteacher-img:hover {
+  position : relative;
+  top : 3pt;
+  left : 3pt;
+}
+
+.question1 { margin-bottom: 110px; }
+
+.question-img {
+  margin-top: 20%;
+  margin-bottom: 8%;
+  width: 40vw;
+}
+
+.Q3-img {
+  margin-top: 20% !important;
+}
+
+.questions {
+  padding-bottom: 7%;
+}
+
+.Q-link { text-decoration: none; }
+
+.Q-link-sp { text-decoration: none; }
+
+.question-btn { 
+  margin: 3vw;
+  width: 25vw;
+}
+
+.question-btn2 {
+  margin: 2vw;
+  width: 35vw;
+}
+
+.question-btn:hover {
+  position : relative;
+  top : 3pt;
+  left : 3pt;
+}
+
+.exactly {
+  width: 26vw;
+  margin-top: 4vw;
+  margin-bottom: 1vw;
+}
+
+.result-img { 
+  width: 47vw;
+  margin-bottom: 1.3vw;
+}
+
+.consultation {
+  color: #fff;
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.btntext1 {
+  padding-top: 6%;
+  padding-bottom: 2%;
+  font-family: Mamelon;
+  color: #656565;
+  text-align: center;
+  font-size: 2.3vw;
+  text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF,
+  -4px 4px 4px #FFFFFF,  4px -4px 4px #FFFFFF,
+  4px 0 4px #FFFFFF, -4px  0 4px #FFFFFF,
+  0 4px 4px #FFFFFF,  0 -4px 4px #FFFFFF;
+}
+.storebtn2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 6%;
+}
+.mobile-image2 {
+  max-height: 100%;
+  height: 6vw;
+  width: auto;
+  margin-left: 4%;
+  margin-right: 2vw;
+}
+
+.frequentlyQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 80%;
+  margin-bottom: 10%;
+}
+
+.Q, .A {
+  width: 5vw;
+  height: auto;
+  margin-right: 2vw;
+}
+
+.QA-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5%;
+  margin-top: 1%;
+}
+
+.QAtext {
+  font-family: Mamelon;
+  color: #656565;
+  font-size: 1.5vw;
+}
+
+.line {
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.footer {
+  background-image: url(../img/footerbanner.png);
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.footer-box-pc {
+  padding-top: 2vw;
+  padding-bottom: 1.9vw;
+}
+
+.footerItem{
+  text-decoration: none;
+  font-size: 1.6vw;
+  color: #fff;
+}
+
+.whiteLine {
+  border-bottom: solid 0.15vw #fff;
+  width: 75%;
+}
+
+.footerText {
+  font-size: 1.4vw;
+  color: #fff;
+  padding-top: 1.7vw;
+  padding-bottom: 2.2vw;
+}
+
+/* ふわっと表示(その場で)  */
+.fadeIn {
+  opacity:0;
+  transition-duration:2.5s;
+} 
+
+.fadeInText {
+  opacity:0;
+  transition-duration:2s;
+  /* アニメーション開始タイミングをずらす */
+  transition-delay: 1s;
+}
+
+.fadeInLogo {
+  opacity:0;
+  transition-duration:2s;
+  /* アニメーション開始タイミングをずらす */
+  transition-delay: 2s;
+}
+
+.fadeInStore {
+  opacity:0;
+  transition-duration:2s;
+  /* アニメーション開始タイミングをずらす */
+  transition-delay: 3s;
+}
+
+/* 画面に表示されたら */
+.fadeIn.effect { opacity: 1; }
+.fadeInText.effect { opacity: 1; }
+.fadeInLogo.effect { opacity: 1; }
+.fadeInStore.effect { opacity: 1; }
+.fadeInTopLink.effect { opacity: 1; }
+
+/* ふわっと表示(下から) */
+.fadeUp{
+  opacity:0;
+  transition-duration:2s;
+  transform:translateY(50px);
+}
+  
+/* 画面に表示されたら */
+.fadeUp.effect {
+  transform: translateY(0);
+	opacity: 1;
+}
+
+/* ふわふわ */
+@keyframes fuwafuwa {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* このクラスをつけるとふわふわを無限に繰り返します */
+.fuwafuwa.effect { animation: 3s fuwafuwa infinite; }
+
+
+
+/* ここからカルーセルアニメーション */
+
+.slick-slide img { margin: auto; }
+
+/* デフォルトの矢印を消す */
+.slick-arrow:before{
+  content:""!important;
+  width: 100%!important;
+  height: 100%!important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 右矢印サイズ */
+.slick-next {
+  right: 18.5vw !important;
+  padding: 3%;
+}
+
+/* 左矢印サイズ */
+.slick-prev {
+  left: 20.5vw !important;
+  padding: 3%;
+  z-index: 99 !important;
+}
+
+/* 右矢印を任意の画像に */
+.slick-next:before{
+  background: url('../img/arrowRight.png')!important;
+  background-repeat: no-repeat !important;
+  background-size: contain!important;
+}
+
+/* 左矢印を任意の画像に */
+.slick-prev:before{
+  background: url('../img/arrowLeft.png')!important;
+  background-repeat: no-repeat !important;
+  background-size: contain!important;
+}
+
+/* ハンバーガーメニュー */
+
+body {
+  margin: 0;
+  font-family: "Mamelon";
+}
+
+/* Navbar & Navmenu color */
+:root { --background-navbar: rgb(255 255 255 / 85%); }
+
+/* Nav items */
+.menu {
+  top: 100%;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+  clear: both;
+  color: #fff;
+  z-index: 1000;
+  background: rgb(86 86 86 / 90%);
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+/* Hamburger menu button */
+.menu-btn:checked ~ .menu {
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger menbu text */
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 3.5vw;
+  text-transform: capitalize;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu li {
+  border-top: 1px solid rgb(182 182 182);
+  padding: 2% 0;
+  margin: 0 5%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.job-link {
+  display: flex;
+  justify-content: center;
+
+}
+
+.menu-btn:checked ~ .menu a,
+.menu-btn:checked ~ .menu li {
+  opacity: 1;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.menu-btn { display: none; }
+
+.menu-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 4% 4%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.top { border-top: none !important; }
+
+.navicon {
+  background: #ddd;
+  display: block;
+  height: 3px;
+  width: 26px;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #ddd;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before { top: 9px; }
+
+.navicon:after { bottom: 9px; }
+
+/* Hamburger Menu Animation Start */
+.menu-btn:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); }
+
+.menu-btn:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); }
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before { top: 0; }
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after { bottom: 0; }
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+/* Hamburger Menu Animation End */
+
+/* Navbar Container */
+.navtext-container {
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Text */
+.navtext {
+  display: contents;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 768px) {
+  /* タブレットサイズのスタイル */
+  .header { 
+    display: block !important; 
+    background: var(--background-navbar);
+    position: fixed;
+    width: 100%;
+    padding-top: 11%;
+    padding-bottom: 2%;
+    z-index: 1000;
+    box-shadow: 0px 5px 10px 0px rgb(198 198 198 / 50%);
+  }
+
+  .hamburgerLink { display: block; }
+
+  #bg-video { margin-top: 22vw; }
+
+  .job-img {
+    width: 50vw;
+    margin-top: 4vw;
+  }
+
+  .video-background { display: none !important; }
+
+  .video-background-sp {
+    position: relative;
+    display: block !important;
+  }
+
+  .top-banner { 
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+
+  .spaceBoxSp {
+    width: 20%;
+    margin-right: 1%;
+  } 
+
+  .job-btn-sp {
+    width: 230px;
+    position: absolute;
+    display: flex;
+    right: 15px;
+    top: 74px;
+    z-index: 1;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .lismi-logo-sp { 
+    width: 30%;
+  }
+
+  .background-sp {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url('../img/backgground-sp.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .catch-sp {
+    position: absolute;
+    top: 21%;
+    right: 0;
+    width: auto;
+    font-family: Mamelon;
+    color: #656565;
+    font-weight: 400;
+    text-align: center;
+    font-size: 5vw;
+    text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF, -4px 4px 4px #FFFFFF, 4px -4px 4px #FFFFFF, 4px 0 4px #FFFFFF, -4px 0 4px #FFFFFF, 0 4px 4px #FFFFFF, 0 -4px 4px #FFFFFF;
+    z-index: 1;
+  }
+
+  #biglogo-sp {
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    height: 10%;
+    width: auto;
+    z-index: 1;
+  }
+
+  .storebtn-sp {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 1;
+  }
+
+  .ios-image-sp {
+    width: 33vw;
+    margin-right: 4vw;
+  }
+
+  .android-image-sp { width: 40vw; }
+
+  .appDetails { display: none; }
+
+  .appDetails-sp { 
+    align-items: center;
+    display: flex !important;
+    flex-flow: column;
+  }
+
+  .titleDetails-sp {
+    padding-top: 13%;
+    padding-bottom: 15%;
+    font-family: Mamelon;
+    color: #5DC1D7;
+    font-size: 6.3vw;
+  }
+
+  .paragraph-sp {
+    padding-top: 4%;
+    padding-bottom: 3%;
+    font-family: Mamelon;
+    color: #656565;
+    font-weight: 400;
+    line-height: 6vw;
+    font-size: 3.8vw;
+    max-width: 90%;
+    text-shadow: 4px 4px 4px #FFFFFF, -4px -4px 4px #FFFFFF, -4px 4px 4px #FFFFFF, 4px -4px 4px #FFFFFF, 4px 0 4px #FFFFFF, -4px 0 4px #FFFFFF, 0 4px 4px #FFFFFF, 0 -4px 4px #FFFFFF;
+  }
+
+  .problem-box { display: none; }
+
+  .vertical-line-sp { z-index: 1; }
+
+  .problem-box-sp {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .problemTitle { 
+    font-size: 5vw;
+    padding-top: 14%; 
+  }
+
+  .girl-img-sp { 
+    width: 100%;
+    margin-bottom: -15%; 
+  }
+
+  .speech-bubble-sp { width: 85%; }
+
+  .pink-banner { height: 23vw; }
+
+  .pinkbanner-txt {
+    width: 75vw;
+    height: 100%;
+    margin-top: 1.7vw;
+  }
+
+  .picset { display: block !important; }
+
+  .feature {
+    font-size: 6vw;
+    padding-top: 16%;
+    padding-bottom: 6%;
+  }
+
+  .pinkline { width: 14%; }
+
+  .pic-item{ margin: 7%; }
+
+  .pic-description {
+    margin-top: 3%;
+    font-size: 4.6vw;
+  }
+
+  .pic-detail {
+    margin-top: 5%;
+    margin-bottom: 25%;
+    font-size: 4vw;
+  }
+
+  .ribbon-img {
+    margin-top: 17%;
+    width: 80vw;
+  }
+
+  .slider { display: none; }
+
+  .slider-sp { display: block !important; }
+
+  .counselor-img-sp { width:70%; }
+
+  .slick-next {
+    right: 0vw !important;
+    padding: 5%;
+  }
+
+  .slick-prev {
+    left: 2.5vw !important;
+    padding: 5%;
+    z-index: 99 !important;
+  }
+
+  .bestteacher-img { width: 65vw; }
+
+  .question-img {
+    margin-top: 12%;
+    margin-bottom: 4%;
+    width: 64vw;
+  }
+
+  .Q3-img {
+    margin-top: 7% !important;
+    margin-bottom: 0% !important;
+  }
+
+  .question-btn {
+    margin: 5vw 2vw;
+    width: 41vw
+  }
+
+  .question-btn2 { 
+    width: 56vw;
+    margin: 4vw;
+  }
+
+  .exactly {
+    width: 50vw;
+    margin-top: 8vw;
+    margin-bottom: 1vw;
+  }
+
+  .result-img {     
+    width: 95vw;
+    margin-bottom: 1vw;
+  }
+
+  .btn-box { margin-bottom: -6vw; }
+
+  .btn-box-sp { margin-bottom: -6vw; }
+
+  .Q4-box { display: none !important; }
+
+  .Q4-box-sp { display: block !important; }
+  
+
+  .btntext1 {
+    padding-top: 7%;
+    padding-bottom: 3%;
+    font-size: 4vw;
+  }
+
+  .mobile-image2 { height: 11vw; }
+
+  .storebtn2 { padding-bottom: 8%; }
+
+  .frequentlyQuestion {
+    max-width: 90%;
+    margin-bottom: 15%;
+  }
+
+  .consultation {
+    color: #fff;
+    display: block;
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .Q, .A { 
+    width: 8vw; 
+    margin-right: 3vw;
+  }
+
+  .QAtext { font-size: 3vw; }
+
+  .QA-item { margin-bottom: 2.5%; }
+
+  .footer-box-pc {
+    display: none;
+  }
+
+  .footer-box {
+    margin-top: 2vw;
+  }
+
+  .footer-box-sp {
+    display: block !important;
+    padding-top: 1vw;
+    padding-bottom: 0vw;
+  }
+
+  .footerItem{ 
+    font-size: 4vw;
+    text-decoration: underline; 
+  }
+
+  .specified {
+    margin-bottom: 7vw;
+  }
+
+  .termsUse {
+    margin-top: 3vw;
+  }
+  
+  .whiteLine { width: 95%;; }
+  
+  .footerText {
+    font-size: 3.3vw;
+    padding-top: 3.5vw;
+    padding-bottom: 4vw;
+  }
+
+  .top-link {
+    right: 3vw;
+    bottom: 3vw;
+    width: 12vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* スマホサイズのスタイル */
+  .top-link {
+    right: 3vw;
+    bottom: 3vw;
+    width: 16vw;
+  }
+}
