@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="リスミィ">
+    <link rel="icon" href="https://0-o.biz/lismi_test/img/icon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>リスミィ</title>
+</head>
+
+<body>
+
+    <!-- ハンバーガーメニュー -->
+    <header class="header" style="display: none;">
+        <div class="navtext-container">
+            <div class="navtext"><img src="./img/lismi_logo.png" class="lismi-logo-sp"></div>
+        </div>
+        <input type="checkbox" class="menu-btn" id="menu-btn" name="menu-btn">
+        <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li class="top"><a href="#pageTop" class="hamburgerLink">ページトップへ</a></li>
+            <li><a href="#appDetails" class="hamburgerLink">リスミィってどんなアプリ？</a></li>
+            <li><a href="#problem" class="hamburgerLink">こんな悩みを抱えていませんか？</a></li>
+            <li><a href="#feature" class="hamburgerLink">リスミィの特徴</a></li>
+            <li><a href="#teacher" class="hamburgerLink">活躍中の先生をご紹介</a></li>
+            <li><a href="#diagnosis"  class="hamburgerLink" id="diagnosisLink">あなたにぴったりの先生を診断</a></li>
+            <li><a href="#frequently" class="hamburgerLink">よくあるご質問</a></li>
+            <li><a href="https://lismi.onelink.me/tKOb/7so9zliv" target="_blank" class="job-link" >
+              <img src="./img/jobBtn.png" class="job-img">
+            </a></li>
+        </ul>
+    </header>
+
+    <!-- ハンバーガーメニューを閉じる用の要素 -->
+    <div id="fullOverlay"></div>
+
+    <!-- ページトップに移動するボタン -->
+    <img src="./img/topLink.png" class="top-link" >
+
+    <!-- ページトップ -->
+    <div class="video-background">
+
+        <div class="top-banner">
+            <div class="banner-contents">
+                <div class="spaceBox"></div>
+                <img src="./img/lismi_logo.png" class="lismi-logo">
+                <a href="https://lismi.onelink.me/tKOb/7so9zliv" target="_blank" class="job-btn">
+                    <img src="./img/jobBtn.png" class="job-img">
+                </a>
+            </div>
+        </div>
+
+        <video playsinline autoplay muted loop id="bg-video" class="fadeIn">
+            <source src="./img/top.mp4" type="video/mp4">
+            お使いのブラウザはビデオタグをサポートしていません。
+        </video>
+
+        <p class="catch fadeInText">あなたの<span class="pink-txt">相談相手</span>の<span class="pink-txt">イチバン</span>に。</p>
+        <img src="./img/lismi_logo.png" id="biglogo" class="fadeInLogo"/>
+
+        <div class="storebtn fadeInStore">
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- iOS App Storeへのリンク -->
+                <img src="./img/ios.png" alt="iOS Image" class="ios-image" />
+            </a>
+            <div>
+                <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- Google Play Storeへのリンク -->
+                    <img src="./img/android.png" alt="Android Image" class="android-image" />
+                </a>
+            </div>
+        </div>
+
+        <div class="gradationBottom"></div>
+
+    </div>
+
+     <!-- SP版ページトップ -->
+    <div id="pageTop" class="video-background-sp" style="display: none">
+        
+        <video playsinline autoplay muted loop id="bg-video" class="fadeIn">
+            <source src="./img/sptop.mp4" type="video/mp4">
+            お使いのブラウザはビデオタグをサポートしていません。
+        </video>
+
+        <p class="catch-sp fadeInText">あなたの<span class="pink-txt">相談相手</span>の<span class="pink-txt">イチバン</span>に。</p>
+        <img src="./img/lismi_logo.png" id="biglogo-sp" class="fadeInLogo"/>
+
+        <div class="storebtn-sp fadeInStore">
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- iOS App Storeへのリンク -->
+                <img src="./img/ios.png" alt="iOS Image" class="ios-image-sp" />
+            </a>
+            <div>
+                <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- Google Play Storeへのリンク -->
+                    <img src="./img/android.png" alt="Android Image" class="android-image-sp" />
+                </a>
+            </div>
+        </div>
+
+        <div class="gradationBottom"></div>
+
+    </div>
+
+    <!-- リスミィってどんなアプリ？ -->
+    <div class="backimg1">
+        <div class="gradationTop"></div>
+
+        <div class="appDetails">
+            <p class="titleDetails fadeUp">リスミィってどんなアプリ？</p><br>
+            <p class="paragraph1 fadeUp">リスミィは、恋愛や結婚など、<span class="pink-txt" style="margin: 3px;">恋の悩み</span>に特化したチャット相談アプリです。<br>恋愛に関するいろいろなお悩みを、当アプリを通じて<br>日本全国の恋愛カウンセラーや結婚アドバイザーたちに相談することができます。</p>
+            <p class="paragraph2 fadeUp">リスミィでは恋人の喧嘩や片思い中の恋愛、夫婦や結婚のコト、離婚のコトなど、<br>恋愛に関する相談を<span class="pink-txt" style="margin: 3px;">24時間</span>相談したいときにいつでも相談できます。</p>
+            <p class="paragraph3 fadeUp">また相談はアプリのチャットでできるので、家でも学校でも、<br>たとえ会社や移動中でも相談することができます。</p>
+        </div>
+
+        <!-- SP版のテキスト -->
+        <div id="appDetails" class="appDetails-sp" style="display: none;">
+            <p class="titleDetails-sp fadeUp">リスミィってどんなアプリ？</p>
+            <p class="paragraph-sp fadeUp">リスミィは、恋愛や結婚など、<span class="pink-txt" style="margin: 3px;">恋の悩み</span>に特化したチャット相談アプリです。恋愛に関するいろいろなお悩みを、当アプリを通じて日本全国の恋愛カウンセラーや結婚アドバイザーたちに相談することができます。</p>
+            <p class="paragraph-sp fadeUp">リスミィでは恋人の喧嘩や片思い中の恋愛、夫婦や結婚のコト、離婚のコトなど、恋愛に関する相談を<span class="pink-txt" style="margin: 3px;">24時間</span>相談したいときにいつでも相談できます。</p>
+            <p class="paragraph-sp fadeUp" style="padding-bottom: 20%;">また相談はアプリのチャットでできるので、家でも学校でも、たとえ会社や移動中でも相談することができます。</p>
+        </div>
+
+    </div>
+
+    <!-- こんな悩みを抱えていませんか？ -->
+    <div class="backimg2">
+
+        <div class="gradationTop"></div>
+
+        <div class="vertical-line problem-box">
+            <div class="problemTitle">こんな悩みを抱えていませんか？</div>
+            <div class="speech-bubble-box">
+                <div>
+                    <img src="./img/girl.png" class="girl-img">
+                </div>
+                <div class="fuwafuwa-box">
+                    <div class="fuwafuwa fadeUp">
+                        <img src="./img/speech-bubble1.png" alt="カレが何を考えているのか知りたい..." class="speech-bubble">
+                    </div>
+                    <div class="fuwafuwa fadeUp">
+                        <img src="./img/speech-bubble2.png" alt="友人には話しずらい悩みがある..." class="speech-bubble">
+                    </div>
+                    <div class="fuwafuwa fadeUp">
+                        <img src="./img/speech-bubble3.png" alt="新しい恋を見つけたい..." class="speech-bubble">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- こんな悩みを抱えていませんか？(SP版) -->
+        <div class="problem-box-sp" id="problem" style="display: none;">
+            <div class="vertical-line-sp">
+                <div class="problemTitle">こんな悩みを抱えていませんか？</div>
+                <div class="centering">
+                    <img src="./img/girl.png" class="girl-img-sp">
+                </div>
+                <div class="fuwafuwa fadeUp centering">
+                    <img src="./img/speech-bubble1.png" alt="カレが何を考えているのか知りたい..." class="speech-bubble-sp">
+                </div>
+                <div class="fuwafuwa fadeUp centering">
+                    <img src="./img/speech-bubble2.png" alt="友人には話しずらい悩みがある..." class="speech-bubble-sp">
+                </div>
+                <div class="fuwafuwa fadeUp centering" style="margin-bottom: 15%;">
+                    <img src="./img/speech-bubble3.png" alt="新しい恋を見つけたい..." class="speech-bubble-sp">
+                </div>
+            </div>
+        </div>
+
+        <div class="gradationBottom2"></div>
+
+    </div>
+
+    <!-- 全てリスミィで相談できます！ -->
+    <div class="pink-banner">
+        <div>
+            <div class="centering">
+                <img src="./img/polygon.png" class="polygon">
+            </div>
+            <div class="centering">
+                <img src="./img/pinkbannertext.png" class="pinkbanner-txt">
+            </div>
+        </div>
+    </div>
+
+    <!-- リスミィの特徴 -->
+    <p class="feature" id="feature">リスミィの特徴</p>
+    <img class="pinkline" src="./img/pinkline.png" />
+    <div class="picset">
+        <div class="pic-item">
+            <img class="pic" src="./img/pic1.png" />
+            <p class="pic-description fadeIn">24時間いつでも相談可能</p>
+            <p class="pic-detail fadeIn">リスミィでは、常に100人以上のカウンセラーが待機しています。待ち時間0で今すぐ鑑定を開始することが可能です。</p>
+        </div>
+        <div class="pic-item">
+            <img class="pic" src="./img/pic2.png" />
+            <p class="pic-description fadeIn">経験豊富なカウンセラー</p>
+            <p class="pic-detail fadeIn">リスミィでは、プロの占い師が多数在籍しています。店舗では予約の取れない有名な占い師にも、オンラインで鑑定を始めることができます。</p>
+        </div>
+        <div class="pic-item">
+            <img class="pic" src="./img/pic3.png" />
+            <p class="pic-description fadeIn">一通目無料のメッセージ相談</p>
+            <p class="pic-detail fadeIn">占いが初めての方でも、無料で相談を開始することができます。</p>
+        </div>
+    </div>
+
+    <!-- 活躍中の先生をご紹介 -->
+    <div class="backimg3" id="teacher">
+
+        <div class="ribbon">
+            <img src="./img/ribbon.png" class="ribbon-img">
+        </div>
+
+        <!-- カルーセルアニメーション -->
+        <ul class="slider">
+            <li><img class="counselor-img" src="./img/keito.png"></li>
+            <li><img class="counselor-img" src="./img/kougetsu.png"></li>
+            <li><img class="counselor-img" src="./img/kanami.png"></li>
+            <li><img class="counselor-img" src="./img/ani.png"></li>
+            <li><img class="counselor-img" src="./img/luka.png"></li>
+            <li><img class="counselor-img" src="./img/jigen.png"></li>
+        </ul>
+
+        <!-- カルーセルアニメーション(SP版) -->
+        <ul class="slider-sp" style="display: none;">
+            <li><img class="counselor-img" src="./img/keito-sp.png"></li>
+            <li><img class="counselor-img" src="./img/kougetsu-sp.png"></li>
+            <li><img class="counselor-img" src="./img/kanami-sp.png"></li>
+            <li><img class="counselor-img" src="./img/ani-sp.png"></li>
+            <li><img class="counselor-img" src="./img/luka-sp.png"></li>
+            <li><img class="counselor-img" src="./img/jigen-sp.png"></li>
+        </ul>
+
+    </div>
+
+    <!-- まずは無料で気軽に相談してみませんか？ -->
+    <div class="backimg4">
+        <p class="btntext1">まずは無料で気軽に相談してみませんか？</p>
+        <div class="storebtn2">
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- iOS App Storeへのリンク -->
+                <img src="./img/ios.png" alt="iOS Image" class="mobile-image2" />
+            </a>
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- Google Play Storeへのリンク -->
+                <img src="./img/android.png" alt="Android Image" class="mobile-image2" />
+            </a>
+        </div>
+    </div>
+
+    <!-- あなたにぴったりの先生を診断 -->
+    <div class="diagnosisBackImg" id="diagnosis">
+
+        <div class="bestteacher-box" id="bestteacher-box">
+            <a href="#question1" id="bestteacher" class="Q-link">
+                <img src="./img/bestteacher.png" alt="あなたにぴったりの先生を診断" class="bestteacher-img">
+            </a>
+        </div>
+
+        <div class="centering questions" id="question1" style="display: none;">
+            <div class="addspace">
+                <div class="centering">
+                    <img src="./img/Q1.png" alt="悩みのジャンルは何ですか？" class="question-img">
+                </div>
+                <div class="btn-box">
+                    <a href="#question2" class="question2-link Q-link" data-item1="reconciliation">
+                        <img src="./img/btnReconciliation.png" alt="復縁" class="question-btn">
+                    </a>
+                    <a href="#question2" class="question2-link Q-link" data-item1="love">
+                        <img src="./img/btnLove.png" alt="恋愛成就" class="question-btn">
+                    </a>       
+                </div>
+                <div>
+                    <a href="#question2" class="question2-link Q-link" data-item1="marriage">
+                        <img src="./img/btnMarriage.png" alt="結婚" class="question-btn">
+                    </a>
+                    <a href="#question2" class="question2-link Q-link" data-item1="adultery">
+                        <img src="./img/btnAdultery.png" alt="不倫" class="question-btn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="centering questions" id="question2" style="display: none;">
+            <div class="addspace">
+                <div class="centering">
+                    <img src="./img/Q2.png" alt="先生の性別に希望はありますか？" class="question-img">
+                </div>
+                <div class="btn-box">
+                    <a href="#question3" class="question3-link Q-link" data-item2="man">
+                        <img src="./img/btnMan.png" alt="男性" class="question-btn">
+                    </a>
+                    <a href="#question3" class="question3-link Q-link" data-item2="woman"> 
+                        <img src="./img/btnWoman.png" alt="女性" class="question-btn">
+                    </a>
+                </div>
+                <div class="centering">
+                    <a href="#question3" class="question3-link Q-link" data-item2="both"> 
+                        <img src="./img/btnBoth.png" alt="どちらでもよい" class="question-btn2">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="centering questions" id="question3" style="display: none;">
+            <div class="addspace">
+                <div class="centering">
+                    <img src="./img/Q3.png" alt="希望の占いスタイルはありますか？" class="question-img Q3-img">
+                </div>
+                <div class="btn-box">
+                    <a href="#question4" class="question4-link Q-link" data-item3="tarot">
+                        <img src="./img/btnTarot.png" alt="タロット" class="question-btn">
+                    </a>
+                    <a href="#question4" class="question4-link Q-link" data-item3="fourPillar">
+                        <img src="./img/btnFourPillar.png" alt="四柱推命" class="question-btn">
+                    </a>
+                </div>
+                <div class="btn-box">
+                    <a href="#question4" class="question4-link Q-link" data-item3="spiritual">
+                        <img src="./img/btnSpiritual.png" alt="霊視" class="question-btn">
+                    </a>
+                    <a href="#question4" class="question4-link Q-link" data-item3="palmReading">
+                        <img src="./img/btnPalmReading.png" alt="手相" class="question-btn">
+                    </a>  
+                </div>
+                <div>
+                    <a href="#question4" class="question4-link Q-link" data-item3="astrology">
+                        <img src="./img/btnAstrology.png" alt="占星術" class="question-btn">
+                    </a>
+                    <a href="#question4" class="question4-link Q-link" data-item3="counseling">
+                        <img src="./img/btnCounseling.png" alt="カウンセリング" class="question-btn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="centering questions" id="question4" style="display: none;">
+            <div class="addspace">
+                <div class="centering">
+                    <img src="./img/Q4.png" alt="希望の相談スタイルはありますか？" class="question-img">
+                </div>
+                <div class="btn-box Q4-box">
+                    <a href="#question4" class="result-link Q-link" data-item4="clearly">
+                        <img src="./img/btnClearly.png" alt="ハッキリ回答" class="question-btn">
+                    </a>
+                    <a href="#question4" class="result-link Q-link" data-item4="gently">
+                        <img src="./img/btnGently.png" alt="優しく回答" class="question-btn">
+                    </a>
+                </div>
+                <div class="Q4-box">
+                    <a href="#question4" class="result-link Q-link" data-item4="careful">
+                        <img src="./img/btnCareful.png" alt="丁寧に回答" class="question-btn">
+                    </a>
+                    <a href="#question4" class="result-link Q-link" data-item4="immediately">
+                        <img src="./img/btnImmediately.png" alt="すぐに回答" class="question-btn">
+                    </a>
+                </div>
+                <div class="btn-box-sp Q4-box-sp" style="display: none;">
+                    <a href="#question4" class="result-link Q-link-sp" data-item4="clearly">
+                        <img src="./img/btnClearly.png" alt="ハッキリ回答" class="question-btn">
+                    </a>
+                    <a href="#question4" class="result-link Q-link-sp" data-item4="gently">
+                        <img src="./img/btnGently.png" alt="優しく回答" class="question-btn">
+                    </a>
+                </div>
+                <div class="Q4-box-sp" style="display: none;">
+                    <a href="#question4" class="result-link Q-link-sp" data-item4="careful">
+                        <img src="./img/btnCareful.png" alt="丁寧に回答" class="question-btn">
+                    </a>
+                    <a href="#question4" class="result-link Q-link-sp" data-item4="immediately">
+                        <img src="./img/btnImmediately.png" alt="すぐに回答" class="question-btn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="result" id="result" style="display: none;">
+            <div class="centering">
+                <div>
+                    <div class="centering">
+                        <img src="./img/exactly.png" alt="あなたにぴったりの先生" class="exactly">
+                    </div>
+                    <div id="append-box" class="centering"></div>
+                    <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank" class="consultation">
+                        今すぐ相談する
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- まずは無料で気軽に相談してみませんか？ -->
+    <div class="backimg4">
+        <p class="btntext1">まずは無料で気軽に相談してみませんか？</p>
+        <div class="storebtn2">
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- iOS App Storeへのリンク -->
+                <img src="./img/ios.png" alt="iOS Image" class="mobile-image2" />
+            </a>
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- Google Play Storeへのリンク -->
+                <img src="./img/android.png" alt="Android Image" class="mobile-image2" />
+            </a>
+        </div>
+    </div>
+
+    <!-- よくあるご質問 -->
+    <p class="feature" id="frequently">よくあるご質問</p>
+    <img class="pinkline" src="./img/pinkline.png" />
+    <div class="frequentlyQuestion">
+        <div class="QA-item">
+            <img class="Q" src="./img/Q.png" />
+            <p class="QAtext">会員登録は無料ですか？</p>
+        </div>
+        <div class="QA-item">
+            <img class="A" src="./img/A.png" />
+            <p class="QAtext">はい、無料です。登録費用や月額料金、年会費等は一切いただきません。</p>
+        </div>
+        <img class="line" src="./img/line.png" />
+        <div class="QA-item">
+            <img class="Q" src="./img/Q.png" />
+            <p class="QAtext">登録する姓名は本名でないと利用できませんか？</p>
+        </div>
+        <div class="QA-item">
+            <img class="A" src="./img/A.png" />
+            <p class="QAtext">会員登録時はニックネームでも問題ございません。しかし占い師や占術によって、<br>
+                ご本名が必要となる場合がございます。予めご了承下さいませ。</p>
+        </div>
+        <img class="line" src="./img/line.png" />
+        <div class="QA-item">
+            <img class="Q" src="./img/Q.png" />
+            <p class="QAtext">個人情報の取り扱いは大丈夫ですか？</p>
+        </div>
+        <div class="QA-item">
+            <img class="A" src="./img/A.png" />
+            <p class="QAtext">お客様の個人情報はプライバシーポリシーに従い厳重に管理を行っております。<br>
+                本サービスの利用に関わる目的以外で第三者に提供することはございませんのでご安心ください。</p>
+        </div>
+        <img class="line" src="./img/line.png" />
+        </div>
+    </div>
+
+    <!-- まずは無料で気軽に相談してみませんか？ -->
+    <div class="backimg4">
+        <p class="btntext1">まずは無料で気軽に相談してみませんか？</p>
+        <div class="storebtn2">
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- iOS App Storeへのリンク -->
+                <img src="./img/ios.png" alt="iOS Image" class="mobile-image2" />
+            </a>
+            <a href="https://lismi.onelink.me/tKOb/bigwlhhp" target="_blank"> <!-- Google Play Storeへのリンク -->
+                <img src="./img/android.png" alt="Android Image" class="mobile-image2" />
+            </a>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footerVertical">
+            <div class="footer-box-pc centering">
+                <a href="https://lismi.jp/term-of-service.html" target="_blank" class="footerItem">利用規約　|　</a>
+                <a href="https://corp.lismi.jp" target="_blank" class="footerItem">会社概要　|　</a>
+                <a href="https://lismi.jp/privacy-policy.html" target="_blank" class="footerItem">プライバシーポリシー　|　</a>
+                <a href="https://lismi.jp/torihiki.html" target="_blank" class="footerItem">特定商取引法による表記</a>
+            </div>
+            <div class="footer-box-sp" style="display: none;">
+                <div class="footer-box centering">
+                    <a href="https://lismi.jp/term-of-service.html" target="_blank" class="footerItem termsUse">利用規約</a>
+                </div>
+                <div class="footer-box centering">
+                    <a href="https://corp.lismi.jp" target="_blank" class="footerItem">会社概要</a>
+                </div>
+                <div class="footer-box centering">
+                    <a href="https://lismi.jp/privacy-policy.html" target="_blank" class="footerItem">プライバシーポリシー</a>
+                </div>
+                <div class="footer-box centering">
+                    <a href="https://lismi.jp/torihiki.html" target="_blank" class="footerItem specified">特定商取引法による表記</a>
+                </div>
+            </div>
+            <div class="centering">
+                <div class="whiteLine"></div>
+            </div>
+            <div class="centering">
+                <p class="footerText">©2019 Lismi inc.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+
+$(function() {
+
+    grantingEffectClass();
+    makeLinksTransparent();
+
+    $(window).scroll(function() {
+        grantingEffectClass();
+        makeLinksTransparent();
+    });
+
+    // $('.diagnosisBackImg').css('height', '0');
+
+    // トップにスクロールするボタンの処理
+    $(".top-link").click(function(){
+        // ボタンがクリックされたら一番上からの距離が0の部分までスクロール
+        $('html,body').animate({'scrollTop':0},500);
+    });
+
+    $('a[href^="#"]').click(function(){
+
+        // 移動先の高さを設定
+        if($(this).attr('id') == 'diagnosisLink' ) {
+            // 先生診断のリンクがクリックされた場合
+            var adjust = -300;
+        } else if($(this).hasClass('Q-link')) {
+            // 先生診断中は位置をずらしたくないので処理を終了
+            return false;
+        } else if($(this).hasClass('Q-link-sp')){
+            // 診断結果の背景画像をSPサイズに変更
+            $('.diagnosisBackImg').css('height', '110vw');
+             // 先生診断中は位置をずらしたくないので処理を終了
+            return false;
+        } else {
+            // それ以外の場合
+            var adjust = -100;
+        }
+        // スクロールの速度（ミリ秒）
+        var speed = 500;
+        // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+        var href= $(this).attr("href");
+        // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+        var position = target.offset().top + adjust;
+        // スムーススクロール
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+         // ハンバーガーメニューを閉じる
+        $('.menu-btn').removeAttr('checked').prop("checked", false).change();
+        return false;
+    });
+
+    
+    $('input[name="menu-btn"]').change(function() {
+
+        if ( $('input[name="menu-btn"]').prop('checked') ) {
+            $('#fullOverlay').show();
+        } else {
+            $('#fullOverlay').hide();
+        }
+    });
+    
+    $('#fullOverlay').on('click', function() {
+        $('.menu-btn').removeAttr('checked').prop("checked", false).change();
+    });
+
+    // カルーセルアニメーションのオプション
+    $('.slider').slick({
+        autoplay: true, //自動再生 
+        autoplaySpeed: 2000, //自動再生の速度 
+        centerMode:true, //スライダーの間隔を空ける
+        centerPadding:"23%", //間隔の指定
+    });
+
+    $('.slider-sp').slick({
+        autoplay: true, //自動再生 
+        autoplaySpeed: 2000, //自動再生の速度 
+    });
+
+
+    // ここから先生診断の処理
+
+    // 「あなたにぴったりの先生を診断」がクリックされたら質問１を表示
+    $('#bestteacher').on('click', function() {
+        $('.diagnosisBackImg').css('height', '56vw');
+        $('#question1').show();
+        $('#bestteacher-box').hide();
+    })
+
+    // 質問１の項目がクリックされたら質問２を表示すると同時に、ブラウザに選択項目のデータを保存
+    $('.question2-link').on('click', function() {
+        $('#question2').show();
+        $('#question1').hide();
+        window.sessionStorage.setItem('item1', $(this).attr('data-item1'));
+    })
+
+    $('.question3-link').on('click', function() {
+        $('#question3').show();
+        $('#question2').hide();
+        window.sessionStorage.setItem('item2', $(this).attr('data-item2'));
+    })
+
+    $('.question4-link').on('click', function() {
+        $('#question4').show();
+        $('#question3').hide();
+        window.sessionStorage.setItem('item3', $(this).attr('data-item3'));
+    })
+
+    $('.result-link').on('click', function() {
+        $('#result').show();
+        $('#question4').hide();
+        window.sessionStorage.setItem('item4', $(this).attr('data-item4'));
+
+        // ブラウザに保存された選択項目のデータを取得し、変数に格納
+        let item1 = window.sessionStorage.getItem('item1');
+        let item2 = window.sessionStorage.getItem('item2');
+        let item3 = window.sessionStorage.getItem('item3');
+        let item4 = window.sessionStorage.getItem('item4');
+
+        // 前回の結果を変数に格納
+        let resultItem = window.sessionStorage.getItem('resultItem');
+        let resultCounselor = window.sessionStorage.getItem('resultCounselor');
+        
+        // 占い師の画像をリセット
+        $('#append-box').empty();
+
+        // それぞれの占い師番号をランダムに格納
+        let womenTopCounselor = getRandomInt(1, 4);
+        let womenCounselor = getRandomInt(1, 15);
+        let menCounselor = getRandomInt(15, 20);
+        let counselor = getRandomInt(1, 20);
+
+        // 前回の選択肢と比較し、同じであれば前回の画像を表示
+        if(resultItem == item1 + item2 + item3 + item4) {
+            $('<img>').attr('src','./img/result_' + resultCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+            return false;
+        }
+
+        // 最初に選択された項目が「復縁」の場合
+        if(item1 == 'reconciliation') {
+            // 性別判定
+            if(item2 == 'woman') {
+                // 画像生成
+                $('<img>').attr('src','./img/result_' + womenTopCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                // ブラウザに選択項目を保存
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                // ブラウザに占い師の画像番号を保存
+                window.sessionStorage.setItem('resultCounselor', womenTopCounselor);
+            } else if(item2 == 'man') {
+                $('<img>').attr('src','./img/result_' + menCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', menCounselor);
+            } else {
+                $('<img>').attr('src','./img/result_' + counselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', counselor);
+            }
+        } 
+
+        if(item1 == 'love') {
+            if(item2 == 'woman') {
+                $('<img>').attr('src','./img/result_' + womenCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', womenCounselor);
+            } else if(item2 == 'man') {
+                $('<img>').attr('src','./img/result_' + menCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', menCounselor);
+            } else {
+                $('<img>').attr('src','./img/result_' + counselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', counselor);
+            }
+        }
+
+        if(item1 == 'marriage') {
+            if(item2 == 'woman') {
+                $('<img>').attr('src','./img/result_' + womenCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', womenCounselor);
+            } else if(item2 == 'man') {
+                $('<img>').attr('src','./img/result_' + menCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', menCounselor);
+            } else {
+                $('<img>').attr('src','./img/result_' + counselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', counselor);
+            }
+        }
+
+        if(item1 == 'adultery') {
+            if(item2 == 'woman') {
+                $('<img>').attr('src','./img/result_' + womenCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', womenCounselor);
+            } else if(item2 == 'man') {
+                $('<img>').attr('src','./img/result_' + menCounselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', menCounselor);
+            } else {
+                $('<img>').attr('src','./img/result_' + counselor + '.png').addClass('result-img').appendTo($('#append-box'));
+                window.sessionStorage.setItem('resultItem', item1 + item2 + item3 + item4);
+                window.sessionStorage.setItem('resultCounselor', counselor);
+            }
+        }
+    })
+
+    // これ以上上側にスクロールできない場合にトップリンクボタンを透明に
+    function makeLinksTransparent() {
+
+        var screenTop = $(this).scrollTop();
+
+        if(screenTop == 0) {
+            $('.top-link').css('opacity', '0.4');
+        } else {
+            $('.top-link').css('opacity', '');
+        }
+
+    }
+    
+    function grantingEffectClass() {
+        //ウィンドウの高さを取得
+          var windowH = $(window).height(),
+        //スクロール位置を取得
+        scrollY = $(window).scrollTop();
+        
+        $('*').each(function() {
+            //要素の位置（上端）を取得
+            var thisPosition = $(this).offset().top;
+            //要素の高さを取得
+            var thisHeight = $(this).height();
+            //要素が画面上に表示されているときにclass="effect"をつける
+            if (thisPosition <= scrollY + windowH && thisPosition + thisHeight >= scrollY) {
+                $(this).addClass('effect');
+            }else{
+                $(this).removeClass('effect') ;
+            }
+        });
+    }
+
+    // min以上max未満のランダムな整数を生成する関数
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+});
+
+</script>
